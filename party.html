@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Split</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; overflow: hidden; }
+        .split-container { position: relative; width: 100%; height: 100vh; background: #000; }
+
+        .side {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            /* Default: center everything */
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- DESKTOP STYLES --- */
+        .tech {
+            background-color: #111;
+            color: #00FF41;
+            clip-path: polygon(0 0, 80% 0, 20% 100%, 0 100%);
+            z-index: 2;
+        }
+
+        .comedy {
+            background-color: #FFD700;
+            color: #111;
+            clip-path: polygon(80% 0, 100% 0, 100% 100%, 20% 100%);
+            z-index: 1;
+        }
+
+        .content { text-align: center; width: 100%; }
+        h1 { font-size: clamp(2rem, 8vw, 4rem); text-transform: uppercase; margin: 0; line-height: 0.9; }
+
+        /* Desktop Text Offsets */
+        .tech .content { padding-right: 30%; }
+        .comedy .content { padding-left: 30%; }
+
+        /* --- MOBILE FIX --- */
+        @media (max-width: 768px) {
+            /* 1. Adjust the diagonal to be less "extreme" on mobile */
+            .tech {
+                clip-path: polygon(0 0, 100% 0, 0 80%); /* Triangle anchored top-left */
+            }
+            .comedy {
+                clip-path: polygon(100% 20%, 100% 100%, 0 100%); /* Triangle anchored bottom-right */
+            }
+
+            /* 2. Remove desktop padding */
+            .tech .content, .comedy .content { padding: 0; }
+
+            /* 3. Manually move Tech text UP and LEFT */
+            .tech {
+                align-items: flex-start; /* Aligns to top */
+                justify-content: flex-start; /* Aligns to left */
+            }
+            .tech .content {
+                margin-top: 15vh;
+                margin-left: 10vw;
+                text-align: left;
+            }
+
+            /* 4. Manually move Comedy text DOWN and RIGHT */
+            .comedy {
+                align-items: flex-end; /* Aligns to bottom */
+                justify-content: flex-end; /* Aligns to right */
+            }
+            .comedy .content {
+                margin-bottom: 15vh;
+                margin-right: 10vw;
+                text-align: right;
+            }
+
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-container">
+        <a href="tech.html" class="side tech">
+            <div class="content">
+                <h1>Creative<br>Tech</h1>
+                <span>Explore &rarr;</span>
+            </div>
+        </a>
+
+        <a href="comedy.html" class="side comedy">
+            <div class="content">
+                <h1>Comedy</h1>
+                <span>Enter &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
