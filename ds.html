@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <title>Work with Mediamonks — Rushali</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --accent: #000000;
+            --text: #000000;
+        }
+
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Inter', Inter, monospace; 
+            line-height: 1.6; 
+            margin: 0; 
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #000000;
+            z-index: 10;
+        }
+
+        nav a { color: var(--accent); text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+
+        h1, h2 { color: var(--accent); text-transform: uppercase; }
+
+        .intro { border-left: 3px solid var(--accent); padding-left: 20px; margin-bottom: 40px; }
+
+        /* Article embed */
+        .article-embed {
+            border: 1px solid #000000;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+            background: #ffffff;
+        }
+
+        .article-embed iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+
+        .article-card {
+            padding: 24px;
+        }
+
+        .article-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .article-card h3 { margin-top: 0; color: var(--accent); }
+
+        .article-card p { color: var(--accent); }
+
+        .read-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #000000;
+            border: 1px solid #000000;
+            border-radius: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .read-link:hover { background: #ffffff; color: #000000; }
+
+        .embed-note {
+            font-size: 0.8rem;
+            color: #777;
+            padding: 10px 24px 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #ffffff;
+            padding: 2px 8px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            border: 1px solid #333;
+            border-radius: 20px;
+        }
+
+        .tags {
+            padding-bottom: 10px;
+        }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">&larr; back</a>
+        <!-- <div>
+            <a href="index.html#about">ABOUT</a> | 
+            <a href="index.html#projects">PROJECTS</a>
+        </div> -->
+    </nav>
+
+    <div class="container">
+
+        <h1>Work with Elevate (previously Downstream)</h1>
+        <div class="intro">
+            <p>Experience design and development of interactive digital installations within Executive Briefing Centers &
+                Customer Experience Centers. Installation, commissioning, QA, user acceptance test, addressing support & SLA 
+                requests as we maintained these systems over the years. Collaboratively developing the internal CMS tool linked 
+                to the software applications that connect and deliver futuristic experiences. 
+            </p>
+        </div>
+
+        <h2>Case Studies</h2>
+
+        <div class="article-embed article-card">
+            <h3>Zoom Video Communications | London</h3>
+            <p>Built a background removing photobooth application along with ambient CMS controlled applications</p>
+            <div class="tags">
+                <span class="tag" style="color: var(--accent);">Background Removal</span>
+                <span class="tag" style="color: var(--accent);">Cinder</span>
+            </div>
+            <img src="https://cdn.prod.website-files.com/6827d567fc04d2ff7b53c175/69a5bc539d59f9f7d2ec4873_ZOOMtb.webp">
+            <a class="read-link" href="https://www.oneelevate.com/case-studies/zoom-video-communications" target="_blank">Read the case study &rarr;</a>
+        </div>
+
+        <div class="article-embed article-card">
+            <h3>Google Cloud Experience Center | Munich </h3>
+            <p>Built an interactive installation called Pour Score that rates how well user poured their beer</p>
+            <div class="tags">
+                <span class="tag" style="color: var(--accent);">Machine Learning</span>
+                <span class="tag" style="color: var(--accent);">Touchdesigner</span>
+            </div>
+            <img src="https://cdn.prod.website-files.com/6827d567fc04d2ff7b53c175/69ea5397ef50bcfa39c3c52f_Cloud%20Space%20-%20Search%20Bar%20%26%20Diorama.webp">
+            <a class="read-link" href="https://www.oneelevate.com/case-studies/google-cloud" target="_blank">Read the case study &rarr;</a>
+        </div>
+
+        <div class="article-embed article-card">
+            <h3>Standard Life | Edinburgh</h3>
+            <img src="https://cdn.prod.website-files.com/6827d567fc04d2ff7b53c175/69dcfbbdefc9897c8ca581ab_Diligenta_Downstream_%C2%A9Henry_Woide_Web_016.webp" alt="graphic">
+            <a class="read-link" href="https://www.oneelevate.com/case-studies/standard-life" target="_blank">Read the case study &rarr;</a>
+        </div>
+
+        <div class="article-embed article-card">
+            <h3>Tetra Pak | Modena</h3>
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1036708724?h=c2a4a0578b" 
+            width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" 
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"></iframe>
+        </div>
+
+        <div class="article-embed article-card">
+            <h3>Hyatt Regency Hotel | Tokyo</h3>
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1048039352?h=122b0b72d5" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+        </div>   
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/rushaliparatey" target="_blank">LINKEDIN</a>
+            <a href="https://medium.com/@rushali" target="_blank">READ BLOG</a>
+            <a href="mailto:rushali@protonmail.com">ELECTRONIC MAIL</a>
+        </div>
+        <p class="copyright">🪼</p>
+    </footer>
+
+</body>
+</html>
+    
+
